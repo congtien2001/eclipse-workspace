@@ -9,19 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Registerdao;
-
 /**
- * Servlet implementation class dangkyController
+ * Servlet implementation class LoginController
  */
-@WebServlet("/dangkyController")
-public class RegisterController extends HttpServlet {
+@WebServlet("/LoginController")
+public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterController() {
+    public LoginController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,23 +28,8 @@ public class RegisterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String HoTen = request.getParameter("txthoten");
-		String DiaChi = request.getParameter("txtdiachi");
-		String SoDT = request.getParameter("txtsodt");
-		String Email = request.getParameter("txtemail");
-		String TenDN = request.getParameter("txttendn");
-		String Pass = request.getParameter("txtpass");
-		
 		RequestDispatcher rd;
-		
-		if(HoTen != null || DiaChi != null || TenDN !=null || Pass !=null) {
-			Registerdao dkdao = new Registerdao();
-			dkdao.Dangky(HoTen, DiaChi, SoDT, Email, TenDN, Pass);
-			rd = request.getRequestDispatcher("LoginController");
-		}
-		else {
-			rd = request.getRequestDispatcher("Register.jsp");
-		}
+		rd = request.getRequestDispatcher("Login.jsp");
 		rd.forward(request, response);
 	}
 

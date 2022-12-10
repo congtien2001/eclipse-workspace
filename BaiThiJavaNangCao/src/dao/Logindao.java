@@ -1,10 +1,10 @@
 package dao;
 
-import dao.Registerdao;
+import dao.Logindao;
 import java.sql.PreparedStatement;
 
-public class Registerdao {
-	public void Dangky(String HoTen, String DiaChi, String SoDT, String Email, String TenDN, String Pass) {
+public class Logindao {
+	public void DangNhap(String TenDN, String Pass) {
 		try {
 			//ket noi 
 			KetNoidao kn = new KetNoidao();
@@ -14,12 +14,9 @@ public class Registerdao {
 			
 			PreparedStatement cmd = kn.cn.prepareStatement(sql);
 			// co dau ? phai truyen tham so vao
-			cmd.setString(1, HoTen);
-			cmd.setString(2, DiaChi);
-			cmd.setString(3, SoDT);
-			cmd.setString(4, Email);
-			cmd.setString(5, TenDN);
-			cmd.setString(6, Pass);
+			
+			cmd.setString(1, TenDN);
+			cmd.setString(2, Pass);
 			//cap nhat
 			cmd.executeUpdate();					
 			kn.cn.close();			
