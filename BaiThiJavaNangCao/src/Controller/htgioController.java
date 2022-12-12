@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Registerdao;
+import bean.loaibean;
+import bo.loaibo;
 
 /**
- * Servlet implementation class dangkyController
+ * Servlet implementation class htgioController
  */
-@WebServlet("/RegisterController")
-public class RegisterController extends HttpServlet {
+@WebServlet("/htgioController")
+public class htgioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterController() {
+    public htgioController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,23 +32,11 @@ public class RegisterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String HoTen = request.getParameter("txthoten");
-		String DiaChi = request.getParameter("txtdiachi");
-		String SoDT = request.getParameter("txtsodt");
-		String Email = request.getParameter("txtemail");
-		String TenDN = request.getParameter("txttendn");
-		String Pass = request.getParameter("txtpass");
+		loaibo lbo=new loaibo();
+		ArrayList<loaibean> dsloai=lbo.getloai();
+		request.setAttribute("dsloai", dsloai);
 		
-		RequestDispatcher rd;
-		
-		if(HoTen != null || DiaChi != null || TenDN !=null || Pass !=null) {
-			Registerdao dkdao = new Registerdao();
-			dkdao.Dangky(HoTen, DiaChi, SoDT, Email, TenDN, Pass);
-			rd = request.getRequestDispatcher("LoginController");
-		}
-		else {
-			rd = request.getRequestDispatcher("Register.jsp");
-		}
+		RequestDispatcher rd=request.getRequestDispatcher("htgio.jsp"); // điều hướng
 		rd.forward(request, response);
 	}
 

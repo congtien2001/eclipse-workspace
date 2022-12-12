@@ -2,7 +2,7 @@ package bean;
 
 public class didongbean {
 	private String MaDiDong;
-	private String TenDiDONG;
+	private String TenDiDong;
 	private String SoLuong;
 	private String Gia;
 	private String MaLoai;
@@ -13,7 +13,7 @@ public class didongbean {
 	public didongbean(String maDiDong, String tenDiDONG, String soLuong, String gia, String maLoai, String anh) {
 		super();
 		MaDiDong = maDiDong;
-		TenDiDONG = tenDiDONG;
+		TenDiDong = tenDiDONG;
 		SoLuong = soLuong;
 		Gia = gia;
 		MaLoai = maLoai;
@@ -26,10 +26,10 @@ public class didongbean {
 		MaDiDong = maDiDong;
 	}
 	public String getTenDiDONG() {
-		return TenDiDONG;
+		return TenDiDong;
 	}
 	public void setTenDiDONG(String tenDiDONG) {
-		TenDiDONG = tenDiDONG;
+		TenDiDong = tenDiDONG;
 	}
 	public String getSoLuong() {
 		return SoLuong;

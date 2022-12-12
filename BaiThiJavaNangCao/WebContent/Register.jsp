@@ -71,10 +71,10 @@ a {
 </style>
 </head>
 <body>
-	<form action="/action_page.php">
+	<form action="LoginController">
   <div class="container">
-    <h2>Register</h2>
-    <p>Please fill in this form to create an account.</p>
+    <h2 style="text-align: center;">Register</h2>
+    <p style="text-align: right";>Please fill in this form to create an account.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
@@ -96,7 +96,7 @@ a {
   </div>
   
   <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    <p>Already have an account? <a href="LoginController">Sign in</a>.</p>
   </div>
 </form>
 </body>
