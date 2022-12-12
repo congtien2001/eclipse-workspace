@@ -71,7 +71,7 @@ a {
 </style>
 </head>
 <body>
-	<form action="LoginController">
+	<form action="LoginController" method="post">
   <div class="container">
     <h2 style="text-align: center;">Register</h2>
     <p style="text-align: right";>Please fill in this form to create an account.</p>

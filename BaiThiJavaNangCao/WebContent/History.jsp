@@ -1,3 +1,12 @@
+<%@page import="bean.Khachhangbean"%>
+<%@page import="bean.Historybean"%>
+<%@page import="bo.didongbo"%>
+<%@page import="bo.loaibo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="bean.didongbean"%>
+<%@page import="dao.didongdao"%>
+<%@page import="bean.loaibean"%>
+<%@page import="dao.loaidao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -26,15 +35,15 @@
       <li><a href="xoa.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li>
       <%if(session.getAttribute("kh")==null){ %>
-      <a href="ktdnController">
+      <a href="KtdnController">
           <span class="glyphicon glyphicon-log-in"></span>
 	       Login
        </a></li>
        <%} else{  %>
        <a href="#">
           <span class="glyphicon glyphicon-log-in"></span>
-	       Hi <%khachhangbean kh =(khachhangbean)session.getAttribute("kh");
-	         out.print(kh.getHoten());%>
+	       Hi <%Khachhangbean kh =(Khachhangbean)session.getAttribute("kh");
+	         out.print(kh.getHoTen());%>
        </a></li>
        <%} %>
     </ul>
@@ -51,8 +60,8 @@
 	   	 
 	   			for(loaibean l: dsloai){%>
 	   			   <tr><td>
-	   				  <a href="htsachController?ml=<%=l.getMaloai()%>">
-	   				   <%=l.getTenloai()%> </a>
+	   				  <a href="htsachController?ml=<%=l.getMaLoai()%>">
+	   				   <%=l.getTenLoai()%> </a>
 	   				 </td>
 	   				</tr>
 	   		<%	}
@@ -63,13 +72,13 @@
    		<table  class="table table-hover">
 	   		 <%
 	   		 
-	   		ArrayList<lichsubean> dsls=(ArrayList<lichsubean>)request.getAttribute("dslichsu");
+	   		ArrayList<Historybean> dsls=(ArrayList<Historybean>)request.getAttribute("dslichsu");
 	   		 int i=1;
-	   		   for(lichsubean ls: dsls){
+	   		   for(Historybean ls: dsls){
 	   		 %>
 	   		   <tr>
 	   		   <td><%=i %></td>
-	   		   <td><%=ls.getTensach() %> </td>
+	   		   <td><%=ls.getTendidong() %> </td>
 	   		     <td><%=ls.getSoLuongMua() %> </td>
 	   		       <td><%=ls.getThanhTien() %> </td>
 	   		         <td><%=(ls.isDamua()?"Đã chuyển tiền":"Đang đặt")%> </td>

@@ -23,7 +23,4 @@ public class Loginbean {
 	public void setPass(String pass) {
 		Pass = pass;
 	}
-	
-	
-
 }

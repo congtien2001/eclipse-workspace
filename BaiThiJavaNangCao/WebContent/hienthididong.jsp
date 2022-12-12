@@ -18,10 +18,8 @@
     </button>
   </nav>
 </div>
-
 </head>
 <body>
 	<h1>nguyen cong tien</h1>
-
 </body>
 </html>

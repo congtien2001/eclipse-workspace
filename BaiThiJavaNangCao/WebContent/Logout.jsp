@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%
+		session.removeAttribute("dn");
+		session.removeAttribute("gio");
+		response.sendRedirect("hienthididong.jsp");
+	%>
 </body>
 </html>

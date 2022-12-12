@@ -7,5 +7,6 @@ public class Historybean {
 	private long ThanhTien;
 	private boolean damua;
 	private String anh;
-
+	
+	
 }
