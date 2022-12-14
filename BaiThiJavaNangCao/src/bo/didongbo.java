@@ -5,13 +5,16 @@ import java.util.ArrayList;
 import bean.didongbean;
 import dao.didongdao;
 
-public class didongbo {
-	didongbo sdao=new didongbo();
-	ArrayList<didongbean> ds;
-	public ArrayList<didongbean> getdidong(){
-		ds=sdao.getdidong();
-		return ds;
+public class didongbo 
+	{
+		didongdao sdao=new didongdao();
+		ArrayList<didongbean> ds;
+		public ArrayList<didongbean> getdidong(){
+			ds=sdao.getdidong();
+			return ds;
 	}
+
+	
 public ArrayList<didongbean> TimMa(String ma){
   	 ArrayList<didongbean> tam= new ArrayList<didongbean>();
   	// ArrayList<sachbean> ds= getsach();
@@ -25,10 +28,9 @@ public ArrayList<didongbean> Tim(String key){
   	 ArrayList<didongbean> tam= new ArrayList<didongbean>();
   	// ArrayList<sachbean> ds= getsach();
   	 for(didongbean s: ds)
-	   	if(s.getTenDiDONG().toLowerCase().trim().contains(
+	   	if(s.getTenDiDong().toLowerCase().trim().contains(
 	   			key.toLowerCase().trim()) ||
-	   	   s.getGia().toLowerCase().trim().contains(
-	   	    	key.toLowerCase().trim())||
+	   	   
 	   	   s.getMaLoai().toLowerCase().trim().contains(
 	      		key.toLowerCase().trim())
 	   	   )

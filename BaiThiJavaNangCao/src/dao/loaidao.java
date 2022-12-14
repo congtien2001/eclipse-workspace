@@ -15,7 +15,7 @@ public class loaidao {
 			kn.KetNoi();
 			//B2: Lấy dữ liệu về
 				//b2.1: thiết lập câu lệnh sql
-				String sql="select * from Loai";
+				String sql="select * from Loai1";
 				//b2.2: Thực hiện câu lệnh
 				PreparedStatement cmd=kn.cn.prepareStatement(sql);
 				ResultSet rs=cmd.executeQuery();

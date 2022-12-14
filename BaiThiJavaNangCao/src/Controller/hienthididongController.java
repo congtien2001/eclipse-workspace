@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.loaibean;
+import bean.didongbean;
+import bo.didongbo;
+import bo.loaibo;
+import bo.didongbo;
 
 /**
  * Servlet implementation class hienthididongController
@@ -29,6 +36,23 @@ public class hienthididongController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd;
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		
+		loaibo lbo=new loaibo();
+		ArrayList<loaibean> dsloai=lbo.getloai();
+		request.setAttribute("dsloai", dsloai);
+		
+		didongbo sbo=new didongbo();
+		ArrayList<didongbean> dssach=sbo.getdidong();
+		//tim kiem
+		  String maloai=request.getParameter("ml"); String
+		  key=request.getParameter("txttk"); if(maloai!=null)
+		  dssach=sbo.TimMa(maloai); else if(key!=null) dssach=sbo.Tim(key);
+		 
+		  request.setAttribute("dssach", dssach);
+		 
+
 		rd = request.getRequestDispatcher("hienthididong.jsp");
 		rd.forward(request, response);
 	}

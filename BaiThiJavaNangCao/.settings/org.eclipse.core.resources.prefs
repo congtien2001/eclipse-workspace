@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
 encoding//WebContent/History.jsp=UTF-8
 encoding//WebContent/TestMenu.jsp=UTF-8
+encoding//WebContent/hienthididong.jsp=UTF-8
 encoding//WebContent/htgio.jsp=UTF-8
 encoding//src/Controller/giohangController.java=UTF-8
 encoding//src/Controller/htgioController.java=UTF-8
+encoding//src/dao/didongdao.java=UTF-8
 encoding//src/dao/loaidao.java=UTF-8
