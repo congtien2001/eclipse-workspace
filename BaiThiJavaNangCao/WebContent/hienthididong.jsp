@@ -77,6 +77,7 @@
 		      	 		   <img src="<%=s.getAnh() %>"><br>
 		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
+		      	 		   <%=s.getMaLoai() %> <br>
 		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMaDiDong()%>&ts=<%=s.getTenDiDong()%>&gia=<%=s.getGia()%>">
 		      	 		     <img src="mua.jpg">
 		      	 		  </a> 
@@ -89,6 +90,7 @@
 		      	 		   <img src="<%=s.getAnh() %>"><br>
 		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
+		      	 		   <%=s.getMaLoai() %> <br>
 		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMaDiDong()%>&ts=<%=s.getTenDiDong()%>&gia=<%=s.getGia()%>">
 		      	 		     <img src="mua.jpg">
 		      	 		  </a> 
@@ -100,7 +102,7 @@
  			 </td>
  		 		
  		<td width="200" valign="top" class="form-control"> 
- 			 <form action="htsach.jsp" method="post">
+ 			 <form action="hienthididong.jsp" method="post">
 				  <input class="form-control" name="txttk" type="text" value="" placeholder="Nhap tt"> <br>
 				  <input name="butt" type="submit" value="Search" class="btn-primary">
 			</form>
