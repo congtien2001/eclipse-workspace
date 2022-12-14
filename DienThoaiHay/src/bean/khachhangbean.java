@@ -1,58 +1,55 @@
 package bean;
 
 public class khachhangbean {
-	private int makh;
-	private String hoten;
-	private String diachi;
-	private String sodt;
-	private String email;
+	private int MaKH;
+	private String HoTen;
+	private String DiaChi;
+	private String SoDT;
+	private String Email;
 	private String tendn;
 	private String pass;
-	
 	public khachhangbean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public khachhangbean(int makh, String hoten, String diachi, String sodt, String email, String tendn,
-			String pass) {
+	public khachhangbean(int maKH, String hoTen, String diaChi, String soDT, String email, String tendn, String pass) {
 		super();
-		this.makh = makh;
-		this.hoten = hoten;
-		this.diachi = diachi;
-		this.sodt = sodt;
-		this.email = email;
+		MaKH = maKH;
+		HoTen = hoTen;
+		DiaChi = diaChi;
+		SoDT = soDT;
+		Email = email;
 		this.tendn = tendn;
 		this.pass = pass;
 	}
-	public int getMakh() {
-		return makh;
+	public int getMaKH() {
+		return MaKH;
 	}
-	public void setMakh(int makh) {
-		this.makh = makh;
+	public void setMaKH(int maKH) {
+		MaKH = maKH;
 	}
-	public String getHoten() {
-		return hoten;
+	public String getHoTen() {
+		return HoTen;
 	}
-	public void setHoten(String hoten) {
-		this.hoten = hoten;
+	public void setHoTen(String hoTen) {
+		HoTen = hoTen;
 	}
-	public String getDiachi() {
-		return diachi;
+	public String getDiaChi() {
+		return DiaChi;
 	}
-	public void setDiachi(String diachi) {
-		this.diachi = diachi;
+	public void setDiaChi(String diaChi) {
+		DiaChi = diaChi;
 	}
-	public String getSodt() {
-		return sodt;
+	public String getSoDT() {
+		return SoDT;
 	}
-	public void setSodt(String sodt) {
-		this.sodt = sodt;
+	public void setSoDT(String soDT) {
+		SoDT = soDT;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 	public String getTendn() {
 		return tendn;
@@ -66,6 +63,8 @@ public class khachhangbean {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+	
+	
 	
 	
 	

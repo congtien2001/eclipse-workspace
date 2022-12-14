@@ -79,12 +79,12 @@
 				      	 		<td> <%=ds.getMaHoaDon()%> </td>
 					      	 	<td>
 					      	 		<img alt="" src="<%=ds.getAnh() %>" width="100">
-					      	 		<%=ds.getTensach()%>
+					      	 		<%=ds.getTenDiDong()%>
 					      	 	</td>
 					      	 	<td> <%=ds.getSoLuongMua() %> </td>
-					      	 	<td> <%=ds.getGia() %>/cuốn </td>
+					      	 	<td> <%=ds.getGia() %>/cái </td>
 					      	 	<td> <%=ds.getNgayMua() %> </td>
-					      	 	<td> <%=ds.isDamua() %> </td>
+					      	 	<td> <%=ds.isDaMua() %> </td>
 				      	 	</tr>
 		 			<% }} else{ %>
 		 			 		<p>Lịch sử mua trống! Xin mời <a href="htsachController">Mua hàng</a></p>

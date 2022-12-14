@@ -28,14 +28,14 @@ public class xacnhandao {
 			while(rs.next()) {
 				int MaChiTietHD = rs.getInt("MaChiTietHD");
 				int MaHoaDon = rs.getInt("MaHoaDon");
-				String hoten = rs.getString("hoten");
-				String tensach = rs.getString("tensach");
+				String HoTen = rs.getString("HoTen");
+				String TenDiDong = rs.getString("TenDiDong");
 				int SoLuongMua = rs.getInt("SoLuongMua");
-				long gia = rs.getLong("gia");
-				long thanhtien = rs.getLong("thanhtien");
-				boolean damua = rs.getBoolean("damua");
+				long Gia = rs.getLong("Gia");
+				long ThanhTien = rs.getLong("ThanhTien");
+				boolean DaMua = rs.getBoolean("DaMua");
 				
-				ds.add(new xacnhanbean(MaChiTietHD, MaHoaDon, hoten, tensach, SoLuongMua, gia, thanhtien, damua));
+				ds.add(new xacnhanbean(MaChiTietHD, MaHoaDon, HoTen,TenDiDong , SoLuongMua, Gia, ThanhTien, DaMua));
 			}
 			
 			// b4: dong ket noi

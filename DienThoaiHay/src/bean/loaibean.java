@@ -3,34 +3,30 @@ package bean;
 import java.io.Serializable;
 
 public class loaibean implements Serializable {
-	private String maloai;
-	private String tenloai;
-	
+	private String MaLoai;
+	private String TenLoai;
 	public loaibean() {
 		super();
 	}
-
-	public loaibean(String maloai, String tenloai) {
+	public loaibean(String maLoai, String tenLoai) {
 		super();
-		this.maloai = maloai;
-		this.tenloai = tenloai;
+		MaLoai = maLoai;
+		TenLoai = tenLoai;
 	}
-
-	public String getMaloai() {
-		return maloai;
+	public String getMaLoai() {
+		return MaLoai;
 	}
-
-	public void setMaloai(String maloai) {
-		this.maloai = maloai;
+	public void setMaLoai(String maLoai) {
+		MaLoai = maLoai;
 	}
-
-	public String getTenloai() {
-		return tenloai;
+	public String getTenLoai() {
+		return TenLoai;
 	}
-
-	public void setTenloai(String tenloai) {
-		this.tenloai = tenloai;
+	public void setTenLoai(String tenLoai) {
+		TenLoai = tenLoai;
 	}
+	
+	
 	
 	
 }

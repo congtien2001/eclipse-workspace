@@ -46,7 +46,7 @@ public class thoatController extends HttpServlet {
 			int makh = (int) session.getAttribute("makh");
 			ghdao.ThemHoaDon(makh);
 			for(giohangbean item : ghbo.ds) {
-				ghdao.ThemCTHD(makh, item.getMasach(), item.getSoluong());
+				ghdao.ThemCTHD(makh, item.getMaDiDong(), item.getSoLuong());
 			}
 		}
 		

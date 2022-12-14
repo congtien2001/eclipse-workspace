@@ -26,14 +26,14 @@ public class dangnhapdao {
 			// b3: Duyet qua tap du lieu rs va luu vao mang ds
 			while(rs.next()) {
 				// Lay ve ma loai va ten loai
-				int makh = rs.getInt("makh");
-				String hoten = rs.getString("hoten");
-				String diachi = rs.getString("diachi");
-				String sodt = rs.getString("sodt");
-				String email = rs.getString("email");
+				int MaKH = rs.getInt("MaKH");
+				String HoTen = rs.getString("HoTen");
+				String DiaChi = rs.getString("DiaChi");
+				String SoDT = rs.getString("SoDT");
+				String Email = rs.getString("Email");
 				String tendn = rs.getString("tendn");
 				String pass = rs.getString("pass");
-				ds.add(new khachhangbean(makh, hoten, diachi, sodt, email, tendn, pass));
+				ds.add(new khachhangbean(MaKH, HoTen, DiaChi, SoDT, Email, tendn, pass));
 			}
 			
 			// b4: dong ket noi

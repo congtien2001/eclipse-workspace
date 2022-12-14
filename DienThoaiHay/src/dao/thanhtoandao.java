@@ -14,7 +14,7 @@ public class thanhtoandao {
 			kn.KetNoi();
 			
 			// Update bảng hoadon
-			String sql = "insert into hoadon values(?,?,?)";
+			String sql = "insert into HoaDon values(?,?,?)";
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd.setInt(1, makh);
 			SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd");
@@ -33,16 +33,16 @@ public class thanhtoandao {
 	}
 	
 	
-	public void ThemChiTietHoaDon(int makh, String MaSach, long SoLuong) {
+	public void ThemChiTietHoaDon(int MaKH, String MaDiDong, long SoLuong) {
 		try {
 			KetNoidao kn = new KetNoidao();
 			kn.KetNoi();
 			
 			// Lấy Mã Hóa đơn vừa đc thêm vào từ bảng hoadon
-			String sql = "select MaHoaDon from hoadon where makh=?";
+			String sql = "select MaHoaDon from HoaDon where MaKH=?";
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd = kn.Cn.prepareStatement(sql);
-			cmd.setInt(1, makh);
+			cmd.setInt(1, MaKH);
 			ResultSet rs = cmd.executeQuery();
 			
 			int MaHoaDon = 0;
@@ -54,7 +54,7 @@ public class thanhtoandao {
 			// Update bảng ChiTietHoaDon
 			sql = "insert into ChiTietHoaDon values(?,?,?,?)";
 			cmd = kn.Cn.prepareStatement(sql);
-			cmd.setString(1, MaSach);
+			cmd.setString(1, MaDiDong);
 			cmd.setLong(2, SoLuong);
 			cmd.setInt(3, MaHoaDon);
 			cmd.setObject(4, 1);

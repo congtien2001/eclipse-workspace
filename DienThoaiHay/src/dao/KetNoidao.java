@@ -11,7 +11,7 @@ public class KetNoidao {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			System.out.println("Xong b1");
-			Cn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QlSach;user=sa;password=123");
+			Cn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QLDD;user=sa;password=123");
 			System.out.println("Connected");
 		} catch(Exception e) {
 			e.printStackTrace();

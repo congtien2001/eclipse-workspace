@@ -24,10 +24,10 @@
 					
 				giohangbo ghbo = (giohangbo)session.getAttribute("gio");
 				for(giohangbean list: ghbo.ds) {
-					String sl = request.getParameter(list.getMasach());
+					String sl = request.getParameter(list.getMaDiDong());
 					out.print(sl);
 					if(sl!=null) {
-						list.setSoluong(Long.parseLong(sl));
+						list.setSoLuong(Long.parseLong(sl));
 					}
 				}
 					
@@ -43,7 +43,7 @@
 				String ms = request.getParameter("ms");
 				giohangbo ghbo = (giohangbo)session.getAttribute("gio");
 				for(giohangbean list: ghbo.ds) {
-					if(ms.equals(list.getMasach())) {
+					if(ms.equals(list.getMaDiDong())) {
 						ghbo.ds.remove(list);
 					}
 				}

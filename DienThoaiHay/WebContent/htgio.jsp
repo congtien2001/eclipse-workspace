@@ -70,8 +70,8 @@
       	 	   %>
       	 	     <tr>
       	 	        <td>
-      	 	          <a href="htsachController?ml=<%=loai.getMaloai()%>">
-      	 	             <%=loai.getTenloai() %>
+      	 	          <a href="htsachController?ml=<%=loai.getMaLoai()%>">
+      	 	             <%=loai.getTenLoai() %>
       	 	          </a>  
       	 	        </td>
       	 	      </tr>
@@ -100,18 +100,18 @@
 				      	 	double tongtien=0;
 			      	 		for(giohangbean list: ghbo.ds) {%>
 					      	 	<tr>
-					      	 		<td> <input type="checkbox" name="check" value="<%=list.getMasach()%>"> </td>
+					      	 		<td> <input type="checkbox" name="check" value="<%=list.getMaDiDong()%>"> </td>
 						      	 	<td> <img alt="" src="<%=list.getAnh() %>" width="100"> </td>
-						      	 	<td> <%=list.getTensach()%> </td>
+						      	 	<td> <%=list.getTenDiDong()%> </td>
 						      	 	<td>
-						      	 		<input type="text" value="<%=list.getMasach() %>" name="ms" style="display: none">
-						      	 		<input type="number" value="<%=list.getSoluong() %>" name="<%=list.getMasach() %>" style="width: 50px" min="1">
+						      	 		<input type="text" value="<%=list.getMaDiDong() %>" name="ms" style="display: none">
+						      	 		<input type="number" value="<%=list.getSoLuong() %>" name="<%=list.getMaDiDong() %>" style="width: 50px" min="1">
 						      	 		<input type="submit" name="capnhat" value="Cập nhật">
 						      	 	</td>
 						      	 	<td> <%=list.getGia() %> </td>
-						      	 	<td> <%=list.getThanhtien() %> </td>
-						      	 	<td> <a href="suaxoaController?xoa1=Xóa1&ms=<%=list.getMasach()%>">Xóa</a> </td>
-						      	 	<% tongtien+=list.getThanhtien(); %>
+						      	 	<td> <%=list.getThanhTien() %> </td>
+						      	 	<td> <a href="suaxoaController?xoa1=Xóa1&ms=<%=list.getMaDiDong()%>">Xóa</a> </td>
+						      	 	<% tongtien+=list.getThanhTien(); %>
 					      	 	</tr>
 				 			<%}%>
 			      	 	</table>

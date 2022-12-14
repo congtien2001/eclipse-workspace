@@ -3,97 +3,95 @@ package bean;
 import java.sql.Date;
 
 public class lichsubean {
-	private int makh;
-	private String hoten;
+	private int MaKH;
+	private String HoTen;
 	private int MaHoaDon;
 	private Date NgayMua;
-	private boolean damua;
-	private String MaSach;
-	private String tensach;
-	private String anh;
+	private boolean DaMua;
+	private String MaDiDong;
+	private String TenDiDong;
+	private String Anh;
 	private int SoLuongMua;
-	private int gia;
-	
+	private int Gia;
 	public lichsubean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
-	public lichsubean(int makh, String hoten, int maHoaDon, Date ngayMua, boolean damua, String maSach, String tensach,
-			String anh, int soLuongMua, int gia) {
+	public lichsubean(int maKH, String hoTen, int maHoaDon, Date ngayMua, boolean daMua, String maDiDong,
+			String tenDiDong, String anh, int soLuongMua, int gia) {
 		super();
-		this.makh = makh;
-		this.hoten = hoten;
-		this.MaHoaDon = maHoaDon;
-		this.NgayMua = ngayMua;
-		this.damua = damua;
-		this.MaSach = maSach;
-		this.tensach = tensach;
-		this.anh = anh;
-		this.SoLuongMua = soLuongMua;
-		this.gia = gia;
+		MaKH = maKH;
+		HoTen = hoTen;
+		MaHoaDon = maHoaDon;
+		NgayMua = ngayMua;
+		DaMua = daMua;
+		MaDiDong = maDiDong;
+		TenDiDong = tenDiDong;
+		Anh = anh;
+		SoLuongMua = soLuongMua;
+		Gia = gia;
 	}
-
-	public int getMakh() {
-		return makh;
+	public int getMaKH() {
+		return MaKH;
 	}
-	public void setMakh(int makh) {
-		this.makh = makh;
+	public void setMaKH(int maKH) {
+		MaKH = maKH;
 	}
-	public String getHoten() {
-		return hoten;
+	public String getHoTen() {
+		return HoTen;
 	}
-	public void setHoten(String hoten) {
-		this.hoten = hoten;
+	public void setHoTen(String hoTen) {
+		HoTen = hoTen;
 	}
 	public int getMaHoaDon() {
 		return MaHoaDon;
 	}
 	public void setMaHoaDon(int maHoaDon) {
-		this.MaHoaDon = maHoaDon;
+		MaHoaDon = maHoaDon;
 	}
 	public Date getNgayMua() {
 		return NgayMua;
 	}
 	public void setNgayMua(Date ngayMua) {
-		this.NgayMua = ngayMua;
+		NgayMua = ngayMua;
 	}
-	public boolean isDamua() {
-		return damua;
+	public boolean isDaMua() {
+		return DaMua;
 	}
-	public void setDamua(boolean damua) {
-		this.damua = damua;
+	public void setDaMua(boolean daMua) {
+		DaMua = daMua;
 	}
-	public String getMaSach() {
-		return MaSach;
+	public String getMaDiDong() {
+		return MaDiDong;
 	}
-	public void setMaSach(String maSach) {
-		this.MaSach = maSach;
+	public void setMaDiDong(String maDiDong) {
+		MaDiDong = maDiDong;
 	}
-	public String getTensach() {
-		return tensach;
+	public String getTenDiDong() {
+		return TenDiDong;
 	}
-	public void setTensach(String tensach) {
-		this.tensach = tensach;
+	public void setTenDiDong(String tenDiDong) {
+		TenDiDong = tenDiDong;
 	}
 	public String getAnh() {
-		return anh;
+		return Anh;
 	}
 	public void setAnh(String anh) {
-		this.anh = anh;
+		Anh = anh;
 	}
 	public int getSoLuongMua() {
 		return SoLuongMua;
 	}
 	public void setSoLuongMua(int soLuongMua) {
-		this.SoLuongMua = soLuongMua;
+		SoLuongMua = soLuongMua;
 	}
 	public int getGia() {
-		return gia;
+		return Gia;
 	}
 	public void setGia(int gia) {
-		this.gia = gia;
+		Gia = gia;
 	}
+	
+	
 	
 	
 	

@@ -3,94 +3,77 @@ package bean;
 public class xacnhanbean {
 	private int MaChiTietHD;
 	private int MaHoaDon;
-	private String hoten;
-	private String tensach;
+	private String HoTen;
+	private String TenDiDong;
 	private int SoLuongMua;
-	private long gia;
-	private long thanhtien;
-	private boolean damua;
-	
+	private long Gia;
+	private long ThanhTien;
+	private boolean DaMua;
 	public xacnhanbean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
-	public xacnhanbean(int maChiTietHD, int maHoaDon, String hoten, String tensach, int soLuongMua, long gia,
-			long thanhtien, boolean damua) {
+	public xacnhanbean(int maChiTietHD, int maHoaDon, String hoTen, String tenDiDong, int soLuongMua, long gia,
+			long thanhTien, boolean daMua) {
 		super();
 		MaChiTietHD = maChiTietHD;
 		MaHoaDon = maHoaDon;
-		this.hoten = hoten;
-		this.tensach = tensach;
+		HoTen = hoTen;
+		TenDiDong = tenDiDong;
 		SoLuongMua = soLuongMua;
-		this.gia = gia;
-		this.thanhtien = thanhtien;
-		this.damua = damua;
+		Gia = gia;
+		ThanhTien = thanhTien;
+		DaMua = daMua;
 	}
-
 	public int getMaChiTietHD() {
 		return MaChiTietHD;
 	}
-
 	public void setMaChiTietHD(int maChiTietHD) {
 		MaChiTietHD = maChiTietHD;
 	}
-
 	public int getMaHoaDon() {
 		return MaHoaDon;
 	}
-
 	public void setMaHoaDon(int maHoaDon) {
 		MaHoaDon = maHoaDon;
 	}
-
-	public String getHoten() {
-		return hoten;
+	public String getHoTen() {
+		return HoTen;
 	}
-
-	public void setHoten(String hoten) {
-		this.hoten = hoten;
+	public void setHoTen(String hoTen) {
+		HoTen = hoTen;
 	}
-
-	public String getTensach() {
-		return tensach;
+	public String getTenDiDong() {
+		return TenDiDong;
 	}
-
-	public void setTensach(String tensach) {
-		this.tensach = tensach;
+	public void setTenDiDong(String tenDiDong) {
+		TenDiDong = tenDiDong;
 	}
-
 	public int getSoLuongMua() {
 		return SoLuongMua;
 	}
-
 	public void setSoLuongMua(int soLuongMua) {
 		SoLuongMua = soLuongMua;
 	}
-
 	public long getGia() {
-		return gia;
+		return Gia;
 	}
-
 	public void setGia(long gia) {
-		this.gia = gia;
+		Gia = gia;
 	}
-
-	public long getThanhtien() {
-		return thanhtien;
+	public long getThanhTien() {
+		return ThanhTien;
 	}
-
-	public void setThanhtien(long thanhtien) {
-		this.thanhtien = thanhtien;
+	public void setThanhTien(long thanhTien) {
+		ThanhTien = thanhTien;
 	}
-
-	public boolean isDamua() {
-		return damua;
+	public boolean isDaMua() {
+		return DaMua;
 	}
-
-	public void setDamua(boolean damua) {
-		this.damua = damua;
+	public void setDaMua(boolean daMua) {
+		DaMua = daMua;
 	}
+	
+	
 	
 	
 	

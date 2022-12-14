@@ -2,62 +2,62 @@ package bean;
 
 public class giohangbean {
 
-	private String anh;
-	private String masach;
-	private String tensach;
-	private long soluong;
-	private long gia;
-	private long thanhtien;
-	
+	private String Anh;
+	private String MaDiDong;
+	private String TenDiDong;
+	private long SoLuong;
+	private long Gia;
+	private long ThanhTien;
 	public giohangbean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public giohangbean(String anh, String masach, String tensach, long soluong, long gia) {
+	public giohangbean(String anh, String maDiDong, String tenDiDong, long soLuong, long gia, long thanhTien) {
 		super();
-		this.anh = anh;
-		this.masach = masach;
-		this.tensach = tensach;
-		this.soluong = soluong;
-		this.gia = gia;
-		this.thanhtien = soluong*gia;
+		Anh = anh;
+		MaDiDong = maDiDong;
+		TenDiDong = tenDiDong;
+		SoLuong = soLuong;
+		Gia = gia;
+		ThanhTien = thanhTien;
 	}
 	public String getAnh() {
-		return anh;
+		return Anh;
 	}
 	public void setAnh(String anh) {
-		this.anh = anh;
+		Anh = anh;
 	}
-	public String getMasach() {
-		return masach;
+	public String getMaDiDong() {
+		return MaDiDong;
 	}
-	public void setMasach(String masach) {
-		this.masach = masach;
+	public void setMaDiDong(String maDiDong) {
+		MaDiDong = maDiDong;
 	}
-	public String getTensach() {
-		return tensach;
+	public String getTenDiDong() {
+		return TenDiDong;
 	}
-	public void setTensach(String tensach) {
-		this.tensach = tensach;
+	public void setTenDiDong(String tenDiDong) {
+		TenDiDong = tenDiDong;
 	}
-	public long getSoluong() {
-		return soluong;
+	public long getSoLuong() {
+		return SoLuong;
 	}
-	public void setSoluong(long soluong) {
-		this.soluong = soluong;
+	public void setSoLuong(long soLuong) {
+		SoLuong = soLuong;
 	}
 	public long getGia() {
-		return gia;
+		return Gia;
 	}
 	public void setGia(long gia) {
-		this.gia = gia;
+		Gia = gia;
 	}
-	public long getThanhtien() {
-		return soluong*gia;
+	public long getThanhTien() {
+		return ThanhTien;
 	}
-	public void setThanhtien(long thanhtien) {
-		this.thanhtien = thanhtien;
+	public void setThanhTien(long thanhTien) {
+		ThanhTien = thanhTien;
 	}
+	
+	
 	
 	
 	

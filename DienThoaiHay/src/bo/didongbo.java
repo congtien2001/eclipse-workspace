@@ -10,7 +10,7 @@ public class didongbo {
 	ArrayList<didongbean> ds;
 	
 	public ArrayList<didongbean> getSach() {
-		ds = sdao.getSach();
+		ds = sdao.getDiDong();
 		return ds;
 	}
 	
@@ -27,7 +27,7 @@ public class didongbo {
    	 	ArrayList<didongbean> tam= new ArrayList<didongbean>();
 //   	 	ArrayList<sachbean> ds= getSach();
    	 	for(didongbean s: ds)
-   	 		if(s.getTenDiDong().toLowerCase().trim().contains(key.toLowerCase().trim()) || s.getMaDiDong().toLowerCase().trim().contains(key.toLowerCase().trim())||s.getMaDiDong().toLowerCase().trim().contains(key.toLowerCase().trim()))
+   	 		if(s.getTenDiDong().toLowerCase().trim().contains(key.toLowerCase().trim()) || s.getMaDiDong().toLowerCase().trim().contains(key.toLowerCase().trim())||s.getMaLoai().toLowerCase().trim().contains(key.toLowerCase().trim()))
    	 			tam.add(s);
    	 	return tam;
     }

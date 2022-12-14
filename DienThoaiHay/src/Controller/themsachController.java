@@ -59,16 +59,15 @@ public class themsachController extends HttpServlet {
 			DiskFileItemFactory factory = new DiskFileItemFactory();
 			DiskFileItemFactory fileItemFactory = new DiskFileItemFactory();
 			ServletFileUpload upload = new ServletFileUpload(fileItemFactory);
-			String dirUrl1 = request.getServletContext().getRealPath("") +  File.separator + "image_sach";
+			String dirUrl1 = request.getServletContext().getRealPath("") +  File.separator + "image_didong";
 //			response.getWriter().println(dirUrl1);
 			
-			String masach = "";
-		    String tensach = "";
-		    String tacgia = "";
-		    Long gia = (long) 1;
-		    Long soluong = (long) 2;
-		    String anh = "";
-		    String maloai = "";
+			String MaDiDong = "";
+		    String TenDiDong = "";
+		    Long Gia = (long) 1;
+		    Long SoLuong = (long) 2;
+		    String Anh = "";
+		    String MaLoai = "";
 		    String sotap = "";
 		    		 
 			try {
@@ -76,12 +75,12 @@ public class themsachController extends HttpServlet {
 				//duyệt qua các đối tượng gửi lên từ client gồm file và các control
 				for (FileItem fileItem : fileItems) {
 					if (!fileItem.isFormField()) {//Nếu ko phải các control=>upfile lên
-						anh = fileItem.getName();
+						Anh = fileItem.getName();
 						// xử lý file
 						String nameimg = fileItem.getName();
 						if (!nameimg.equals("")) {
 					        //Lấy đường dẫn hiện tại, chủ ý xử lý trên dirUrl để có đường dẫn đúng
-							String dirUrl = request.getServletContext().getRealPath("") +  File.separator + "image_sach";
+							String dirUrl = request.getServletContext().getRealPath("") +  File.separator + "image_didong";
 							File dir = new File(dirUrl);
 							if (!dir.exists()) {//nếu ko có thư mục thì tạo ra
 								dir.mkdir();
@@ -100,31 +99,31 @@ public class themsachController extends HttpServlet {
 					else { //Neu la control 
 						String control = fileItem.getFieldName();
 						if(control.equals("ms")) {
-							masach = fileItem.getString();
+							MaDiDong = fileItem.getString();
 						}
 						if(control.equals("tensach")) {
-							tensach = fileItem.getString();
+							TenDiDong = fileItem.getString();
 						}
 						if(control.equals("sl")) {
-							soluong = Long.parseLong(fileItem.getString());
+							SoLuong = Long.parseLong(fileItem.getString());
 						}
 						if(control.equals("gia")) {
-							gia = Long.parseLong(fileItem.getString());
+							Gia = Long.parseLong(fileItem.getString());
 						}
 						if(control.equals("ml")) {
-							maloai = fileItem.getString();
+							MaLoai = fileItem.getString();
 						}
 						if(control.equals("sotap")) {
 							sotap = fileItem.getString();
 						}
-						if(control.equals("tg")) {
-							tacgia = fileItem.getString();
-						}
+						/*
+						 * if(control.equals("tg")) { tacgia = fileItem.getString(); }
+						 */
 					}
 				}
 				
-				didongbean s = new didongbean(masach, tensach, tacgia, gia, soluong, "image_sach/" + anh, maloai);
-				
+				//didongbean s = new didongbean(MaDiDong, TenDiDong, SoLuong, Gia,  "image_didong/" + Anh, MaLoai);
+				didongbean s = new didongbean(MaDiDong, TenDiDong, SoLuong, Gia, MaLoai, "image_didong/"+Anh);
 				didongdao sdao = new didongdao();
 				sdao.Them(s, sotap);
 				

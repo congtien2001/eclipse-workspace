@@ -80,16 +80,16 @@
 				      	 	<tr>
 					      	 	<td>
 					      	 		<img alt="" src="<%=list.getAnh() %>" width="100">
-					      	 		<%=list.getTensach()%>
+					      	 		<%=list.getTenDiDong()%>
 					      	 	</td>
 					      	 	<td>
-					      	 		<input type="text" value="<%=list.getMasach() %>" name="ms" style="display: none">
-					      	 		<p><%=list.getSoluong() %></p>
+					      	 		<input type="text" value="<%=list.getMaDiDong() %>" name="ms" style="display: none">
+					      	 		<p><%=list.getSoLuong() %></p>
 					      	 	</td>
 					      	 	<td> <%=list.getGia() %> </td>
-					      	 	<td> <%=list.getThanhtien() %> </td>
+					      	 	<td> <%=list.getThanhTien() %> </td>
 				      	 	</tr>
-			 				<% tongtien+=list.getThanhtien();
+			 				<% tongtien+=list.getThanhTien();
 			 			} %>
 			 			
 		      	 	</table>

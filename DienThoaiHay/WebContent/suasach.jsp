@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Quản lý sách</title>
+	<title>Quản lý Di Động</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 	  <div class="container-fluid">
 	    <ul class="nav navbar-nav">
 	    	<li><a href="loaiadminController">Quản lý loại</a></li>
-	      	<li><a href="sachadminController">Quản lý sách</a></li>
+	      	<li><a href="sachadminController">Quản lý Di Động</a></li>
 	       	<li><a href="thanhtoanController">Thanh toán</a></li>
 	       	<li><a href="xacnhanController">Xác nhận chuyển tiền</a></li>
 	    </ul>
@@ -57,17 +57,17 @@
 		<table width="1000" align="center">
 		 	<tr>
 		 		<td colspan="3">
-		 			<h1>Sửa thông tin sách</h1>
+		 			<h1>Sửa thông tin Di Động</h1>
 		 			<hr>
 		 		</td>
 		 	</tr>
 		 	
 		 	
 		 	<tr>
-		 		<td>Mã sách: <input type="text" name="ms" value="<%=s.getMasach()%>" readonly="readonly"><br></td>
+		 		<td>Mã Di Động: <input type="text" name="ms" value="<%=s.getMaDiDong()%>" readonly="readonly"><br></td>
 		 	</tr>
 		 	<tr>
-		 		<td>Tên sách: <input type="text" name="ten" value="<%=s.getTensach()%>"><br></td>
+		 		<td>Tên Di Động: <input type="text" name="ten" value="<%=s.getTenDiDong()%>"><br></td>
 		 	</tr>
 		 	<tr>
 		 		
@@ -78,20 +78,20 @@
 					  		ArrayList<loaibean> dsloai = (ArrayList<loaibean>) session.getAttribute("dsloai");
 					  		for(loaibean l : dsloai) {
 					  	%>
-					  		<option value="<%=l.getMaloai()%>"><%=l.getTenloai()%></option>
+					  		<option value="<%=l.getMaLoai()%>"><%=l.getTenLoai()%></option>
 					  	<%} %>
 					</select>
 		 			<br>
 		 		</td>
 		 	</tr>
-		 	<tr>
+<%-- 		 	<tr>
 		 		<td>Tác giả: <input type="text" name="tg" value="<%=s.getTacgia()%>"><br></td>
-		 	</tr>
+		 	</tr> --%>
 		 	<tr>
 		 		<td>Giá: <input type="text" name="gia" value="<%=s.getGia()%>"><br></td>
 		 	</tr>
 		 	<tr>
-		 		<td>Số lượng: <input min="1" type="number" name="sl" value="<%=s.getSoluong()%>"><br></td>
+		 		<td>Số lượng: <input min="1" type="number" name="sl" value="<%=s.getSoLuong()%>"><br></td>
 		 	</tr>
 		 	<tr>
 		 		<td><hr></td>

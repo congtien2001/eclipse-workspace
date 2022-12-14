@@ -1,6 +1,8 @@
 package bean;
 
-public class didongbean {
+import java.io.Serializable;
+
+public class didongbean implements Serializable {
 	private String MaDiDong;
 	private String TenDiDong;
 	private long SoLuong;

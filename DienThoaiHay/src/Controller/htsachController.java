@@ -69,7 +69,7 @@ public class htsachController extends HttpServlet {
   		 	}
   		 	else {
   		 		for(giohangbean item: ghcsdl) {
-  	  	 			ghbo.Them(item.getAnh(), item.getMasach(), item.getTensach(), item.getSoluong(), item.getGia());
+  	  	 			ghbo.Them(item.getAnh(), item.getMaDiDong(), item.getTenDiDong(), item.getSoLuong(), item.getGia());
   	  	 		}
   	  	 		session.removeAttribute("gioCSDL");
   	  	 		session.setAttribute("gio", ghbo);

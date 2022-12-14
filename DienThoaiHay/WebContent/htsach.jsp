@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bán Sách Online</title>
+  <title>DienThoaiHay.vn</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -62,7 +62,7 @@
  <table width="1000" align="center">
  	<tr>
  		<td colspan="3">
- 			<h1>BÁN SÁCH ONLINE</h1>
+ 			<h1>ĐIỆN THOẠI HAY</h1>
  		</td>
  	</tr>
  	
@@ -76,8 +76,8 @@
       	 	  %>
       	 	     <tr>
       	 	        <td>
-      	 	          <a href="htsachController?ml=<%=loai.getMaloai()%>">
-      	 	             <%=loai.getTenloai()%>
+      	 	          <a href="htsachController?ml=<%=loai.getMaLoai()%>">
+      	 	             <%=loai.getTenLoai()%>
       	 	          </a>  
       	 	        </td>
       	 	      </tr>
@@ -98,9 +98,9 @@
 	      	 		<tr>
 	      	 		   <td>
 		      	 		   <img src="<%=s.getAnh() %>"><br>
-		      	 		   <%=s.getTensach() %> <br>
+		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
-		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMasach()%>&ts=<%=s.getTensach()%>&gia=<%=s.getGia()%>">
+		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMaDiDong()%>&ts=<%=s.getTenDiDong()%>&gia=<%=s.getGia()%>">
 		      	 		     <img src="mua.jpg">
 		      	 		  </a> 
 	      	 		   </td>
@@ -110,9 +110,9 @@
 	      	 		     %>
 	      	 		   <td>
 		      	 		   <img src="<%=s.getAnh() %>"><br>
-		      	 		   <%=s.getTensach() %> <br>
+		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
-		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMasach()%>&ts=<%=s.getTensach()%>&gia=<%=s.getGia()%>">
+		      	 		   <a href="giohangController?anh=<%=s.getAnh()%>&ms=<%=s.getMaDiDong()%>&ts=<%=s.getTenDiDong()%>&gia=<%=s.getGia()%>">
 		      	 		     <img src="mua.jpg">
 		      	 		  </a> 
 	      	 		   </td>

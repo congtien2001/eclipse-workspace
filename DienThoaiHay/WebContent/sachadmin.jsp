@@ -77,14 +77,14 @@
 	 	%>
 		 	<tr>
 		 		<td><img width="80" src="<%=s.getAnh()%>"></td>
-		 		<td><%=s.getMasach() %></td>
-		 		<td><%=s.getTensach() %></td>
-		 		<td><%=s.getMaloai() %></td>
-		 		<td><%=s.getTacgia() %></td>
+		 		<td><%=s.getMaDiDong() %></td>
+		 		<td><%=s.getTenDiDong() %></td>
+		 		<td><%=s.getMaLoai() %></td>
+<%-- 		 		<td><%=s.getTacgia() %></td> --%>
 		 		<td><%=s.getGia() %></td>
-		 		<td><%=s.getSoluong() %></td>
-		 		<td><a class="btn btn-default" href="suaxoasachController?sua=sua&anh=<%=s.getAnh()%>&ms=<%=s.getMasach()%>&ten=<%=s.getTensach()%>&ml=<%=s.getMaloai()%>&tg=<%=s.getTacgia()%>&gia=<%=s.getGia()%>&sl=<%=s.getSoluong()%>">Sửa</a></td>
-		 		<td><a class="btn btn-default" href="suaxoasachController?xoa=xoa&ms=<%=s.getMasach()%>">Xóa</a></td>
+		 		<td><%=s.getSoLuong() %></td>
+		 		<td><a class="btn btn-default" href="suaxoasachController?sua=sua&anh=<%=s.getAnh()%>&ms=<%=s.getMaDiDong()%>&ten=<%=s.getTenDiDong()%>&ml=<%=s.getMaLoai()%>&gia=<%=s.getGia()%>&sl=<%=s.getSoLuong()%>">Sửa</a></td>
+		 		<td><a class="btn btn-default" href="suaxoasachController?xoa=xoa&ms=<%=s.getMaDiDong()%>">Xóa</a></td>
 		 	</tr>
 		<%} %>
 	 </table>

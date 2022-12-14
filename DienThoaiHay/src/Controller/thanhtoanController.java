@@ -54,7 +54,7 @@ public class thanhtoanController extends HttpServlet {
 				if(ghbo!=null) {
 					ttdao.ThemHoaDon(makh);
 					for(giohangbean item : ghbo.ds) {
-						ttdao.ThemChiTietHoaDon(makh, item.getMasach(), item.getSoluong());
+						ttdao.ThemChiTietHoaDon(makh, item.getMaDiDong(), item.getSoLuong());
 					}
 					session.setAttribute("damuahang", ghbo);
 					session.removeAttribute("gio");

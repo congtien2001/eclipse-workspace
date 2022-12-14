@@ -9,7 +9,7 @@ import bean.loaibean;
 import bean.didongbean;
 
 public class didongdao {
-	public ArrayList<didongbean> getSach() {
+	public ArrayList<didongbean> getDiDong() {
 		try {
 			ArrayList<didongbean> ds = new ArrayList<>();
 			// b1 Ket noi vao CSDL
@@ -18,7 +18,7 @@ public class didongdao {
 			
 			// b2: Lay du lieu ve
 			// b2.1: Thiet lap cau lenh sql
-			String sql = "select * from DiDong";
+			String sql = "select * from DiDong1";
 			// b2.2: Thuc hien cau lenh
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			ResultSet rs = cmd.executeQuery();
@@ -50,7 +50,7 @@ public class didongdao {
 	
 	public ArrayList<didongbean> TimMa(String ma){
 	   	ArrayList<didongbean> tam= new ArrayList<didongbean>();
-	   	ArrayList<didongbean> ds= getSach();
+	   	ArrayList<didongbean> ds= getDiDong();
 	   	for(didongbean s: ds)
 	   		if(s.getMaLoai().equals(ma))
 	   			tam.add(s);
@@ -60,7 +60,7 @@ public class didongdao {
 	
 	public ArrayList<didongbean> Tim(String key){
    	 	ArrayList<didongbean> tam= new ArrayList<didongbean>();
-   	 	ArrayList<didongbean> ds= getSach();
+   	 	ArrayList<didongbean> ds= getDiDong();
    	 	for(didongbean s: ds)
    	 		if(s.getTenDiDong().toLowerCase().trim().contains(key.toLowerCase().trim()) || s.getMaDiDong().toLowerCase().trim().contains(key.toLowerCase().trim())||s.getMaLoai().toLowerCase().trim().contains(key.toLowerCase().trim()))
    	 			tam.add(s);
@@ -72,7 +72,7 @@ public class didongdao {
 			KetNoidao kn = new KetNoidao();
 			kn.KetNoi();
 			
-			String sql = "delete from sach where MaDiDong=?";
+			String sql = "delete from DiDong1 where MaDiDong=?";
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd.setString(1, ms);
 			
@@ -95,26 +95,23 @@ public class didongdao {
 			String sql;
 			
 			if(s.getAnh().equals("")) {
-				sql = "update sach set tensach=?, soluong=?, gia=?, maloai=?, tacgia=? where masach=?";
+				sql = "update DiDong1 set TenDiDong=?, SoLuong=?, Gia=?, MaLoai=? where MaDiDong=?";
 				cmd = kn.Cn.prepareStatement(sql);
 				cmd.setString(1, s.getTenDiDong());
-				cmd.setLong(2, s.getSoluong());
+				cmd.setLong(2, s.getSoLuong());
 				cmd.setLong(3, s.getGia());
-				cmd.setString(4, s.getMaloai());
-				cmd.setString(5, s.getTacgia());
-				cmd.setString(6, s.getMasach());
+				cmd.setString(4, s.getMaLoai());
+				cmd.setString(5, s.getMaDiDong());
 				cmd.executeUpdate();
 			}
 			else {
-				sql = "update sach set tensach=?, soluong=?, gia=?, maloai=?, anh=?, tacgia=? where masach=?";
+				sql = "update DiDong1 set TenDiDong=?, SoLuong=?, Gia=?, MaLoai=? where MaDiDong=?";
 				cmd = kn.Cn.prepareStatement(sql);
 				cmd.setString(1, s.getTenDiDong());
-				cmd.setLong(2, s.getSoluong());
+				cmd.setLong(2, s.getSoLuong());
 				cmd.setLong(3, s.getGia());
-				cmd.setString(4, s.getMaloai());
-				cmd.setString(5, s.getAnh());
-				cmd.setString(6, s.getTacgia());
-				cmd.setString(7, s.getMasach());
+				cmd.setString(4, s.getMaLoai());
+				cmd.setString(5, s.getMaDiDong());
 				cmd.executeUpdate();
 			}
 			
@@ -135,18 +132,18 @@ public class didongdao {
 			PreparedStatement cmd;
 			String sql;
 			
-			sql = "insert into sach values (?,?,?,?,?,?,?,?,?)";
+			sql = "insert into DiDong1 values (?,?,?,?,?,?,?,?,?)";
 			cmd = kn.Cn.prepareStatement(sql);
 			cmd.setString(1, s.getMaDiDong());
 			cmd.setString(2, s.getTenDiDong());
 			cmd.setLong(3, s.getSoLuong());
 			cmd.setLong(4, s.getGia());
-			cmd.setString(5, s.getMaloai());
+			cmd.setString(5, s.getMaLoai());
 			cmd.setString(6, sotap);
 			cmd.setString(7, s.getAnh());
 			java.sql.Date ngaysql = new java.sql.Date(new Date().getTime());
 			cmd.setDate(8, ngaysql);
-			cmd.setString(9, s.getTacgia());
+			/* cmd.setString(9, s.getTacgia()); */
 			cmd.executeUpdate();
 			
 			

@@ -8,7 +8,7 @@ import bean.khachhangbean;
 
 public class dangkydao {
 	
-	public void Dangky(String hoten, String diachi, String sodt, String email, String tendn, String pass) {
+	public void Dangky(String HoTen, String DiaChi, String SoDT, String Email, String tendn, String pass) {
 		try {
 			KetNoidao kn = new KetNoidao();
 			kn.KetNoi();
@@ -16,10 +16,10 @@ public class dangkydao {
 			String sql = "insert into KhachHang values(?,?,?,?,?,?)";
 			
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
-			cmd.setString(1, hoten);
-			cmd.setString(2, diachi);
-			cmd.setString(3, sodt);
-			cmd.setString(4, email);
+			cmd.setString(1, HoTen);
+			cmd.setString(2, DiaChi);
+			cmd.setString(3, SoDT);
+			cmd.setString(4, Email);
 			cmd.setString(5, tendn);
 			cmd.setString(6, pass);
 			

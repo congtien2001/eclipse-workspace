@@ -62,7 +62,7 @@
 						  		ArrayList<loaibean> dsloai = (ArrayList<loaibean>) session.getAttribute("dsloai");
 						  		for(loaibean l : dsloai) {
 						  	%>
-						  		<option value="<%=l.getMaloai()%>"><%=l.getTenloai()%></option>
+						  		<option value="<%=l.getMaLoai()%>"><%=l.getTenLoai()%></option>
 						  	<%} %>
 						</select>
 						<br>

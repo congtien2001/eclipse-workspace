@@ -16,7 +16,7 @@ public class loaidao {
 			
 			// b2: Lay du lieu ve
 			// b2.1: Thiet lap cau lenh sql
-			String sql = "select * from loai";
+			String sql = "select * from Loai1";
 			// b2.2: Thuc hien cau lenh
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			ResultSet rs = cmd.executeQuery();
@@ -24,18 +24,15 @@ public class loaidao {
 			// b3: Duyet qua tap du lieu rs va luu vao mang ds
 			while(rs.next()) {
 				// Lay ve ma loai va ten loai
-				String maloai = rs.getString("maloai");
-				String tenloai = rs.getString("tenloai");
-				ds.add(new loaibean(maloai, tenloai));
+				String MaLoai = rs.getString("MaLoai");
+				String TenLoai = rs.getString("TenLoai");
+				ds.add(new loaibean(MaLoai, TenLoai));
 			}
 			
 			// b4: dong ket noi
 			kn.Cn.close();
 			rs.close();
-			
-			
-			
-			
+
 			
 //			ds.add(new loaibean("Tin", "Cong nghe thong tin"));
 //			ds.add(new loaibean("Toan", "Giai tich"));

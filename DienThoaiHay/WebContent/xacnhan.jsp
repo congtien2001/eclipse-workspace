@@ -66,10 +66,10 @@
  	
  	<tr>
  		<td><%=xn.getMaChiTietHD() %></td>
- 		<td><%=xn.getHoten() %></td>
- 		<td><%=xn.getTensach() %></td>
+ 		<td><%=xn.getHoTen() %></td>
+ 		<td><%=xn.getTenDiDong() %></td>
  		<td><%=xn.getSoLuongMua() %></td>
- 		<td><%=xn.getThanhtien() %></td>
+ 		<td><%=xn.getThanhTien() %></td>
  		<td><a href="xacnhanchitietController?mct=<%=xn.getMaChiTietHD()%>&mhd=<%=xn.getMaHoaDon()%>">Xác nhận chuyển tiền</a></td>
  		
  		

@@ -50,14 +50,14 @@ public class suaxoasachController extends HttpServlet {
 			}
 			// CHUYỂN QUA TRANG SỬA
 			else if(request.getParameter("sua")!=null) {
-				String masach = request.getParameter("ms");
-				String tensach = request.getParameter("ten");
-			    String tacgia = request.getParameter("tg");
-			    Long gia = Long.parseLong(request.getParameter("gia"));
-			    Long soluong = Long.parseLong(request.getParameter("sl"));
-			    String maloai = request.getParameter("ml");
+				String MaDiDong = request.getParameter("ms");
+				String TenDiDong = request.getParameter("ten");
+				/* String tacgia = request.getParameter("tg"); */
+			    Long Gia = Long.parseLong(request.getParameter("gia"));
+			    Long SoLuong = Long.parseLong(request.getParameter("sl"));
+			    String MaLoai = request.getParameter("ml");
 			    
-			    didongbean s = new didongbean(masach, tensach, tacgia, gia, soluong, "", maloai);
+			    didongbean s = new didongbean(MaDiDong, TenDiDong, Gia, SoLuong, "", MaLoai);
 			    session.setAttribute("s", s);
 			    
 				response.sendRedirect("suasachController");
@@ -65,14 +65,14 @@ public class suaxoasachController extends HttpServlet {
 			
 			// LƯU THÔNG TIN ĐÃ SỬA
 			else if(request.getParameter("luu")!=null) {
-				String masach = request.getParameter("ms");
-				String tensach = request.getParameter("ten");
-			    String tacgia = request.getParameter("tg");
-			    Long gia = Long.parseLong(request.getParameter("gia"));
-			    Long soluong = Long.parseLong(request.getParameter("sl"));
-			    String maloai = request.getParameter("ml");
+				String MaDiDong = request.getParameter("ms");
+				String TenDiDong = request.getParameter("ten");
+				/* String tacgia = request.getParameter("tg"); */
+			    Long Gia = Long.parseLong(request.getParameter("gia"));
+			    Long SoLuong = Long.parseLong(request.getParameter("sl"));
+			    String MaLoai = request.getParameter("ml");
 			    
-			    didongbean s = new didongbean(masach, tensach, tacgia, gia, soluong, "", maloai);
+			    didongbean s = new didongbean(MaDiDong, TenDiDong, Gia, SoLuong, "", MaLoai);
 			    
 			    didongdao sdao = new didongdao();
 			    sdao.Sua(s);

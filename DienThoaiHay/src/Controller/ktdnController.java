@@ -48,14 +48,14 @@ public class ktdnController extends HttpServlet {
 			for(khachhangbean item : dstaikhoan) {
 				if(un.equals(item.getTendn()) && pass.equals(item.getPass())) {
 					session.setAttribute("dn", un);		// tạo đối tượng session
-					session.setAttribute("makh", item.getMakh());
+					session.setAttribute("makh", item.getMaKH());
 					
 					// Lấy giỏ hàng trong csdl gán vào session
 					giohangdao ghdao = new giohangdao();
-					session.setAttribute("gioCSDL", ghdao.getGioHang(item.getMakh()));
+					session.setAttribute("gioCSDL", ghdao.getGioHang(item.getMaKH()));
 					// Xóa dữ liệu giỏ hàng cũ chưa mua trong csdl
-					ghdao.XoaCTHD(ghdao.getMaHoaDon(item.getMakh()));
-					ghdao.XoaHoaDon(item.getMakh());
+					ghdao.XoaCTHD(ghdao.getMaHoaDon(item.getMaKH()));
+					ghdao.XoaHoaDon(item.getMaKH());
 					
 					
 				 	// Nhập giỏ hàng lưu trong CSDL với session gio
@@ -69,7 +69,7 @@ public class ktdnController extends HttpServlet {
 			  		 	}
 			  		 	else {
 			  		 		for(giohangbean itemGiohangbean: ghcsdl) {
-			  	  	 			ghbo.Them(itemGiohangbean.getAnh(), itemGiohangbean.getMasach(), itemGiohangbean.getTensach(), itemGiohangbean.getSoluong(), itemGiohangbean.getGia());
+			  	  	 			ghbo.Them(itemGiohangbean.getAnh(), itemGiohangbean.getMaDiDong(), itemGiohangbean.getTenDiDong(), itemGiohangbean.getSoLuong(), itemGiohangbean.getGia());
 			  	  	 		}
 			  	  	 		session.removeAttribute("gioCSDL");
 			  	  	 		session.setAttribute("gio", ghbo);
