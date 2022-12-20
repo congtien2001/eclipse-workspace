@@ -16,23 +16,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel=' icon'  href="didong_image/logo.png"  type="image/x-icon"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-	* {box-sizing: border-box;}
-	
+	* {box-sizing: border-box;
+		}
 	body {
 	  margin: 0;
 	  font-family: Arial, Helvetica, sans-serif;
 	}
+	.h1{
+		text-align: center;
+		background-color:#EF4444 ;
+	}
+	.anh1{
+
+	}
 	
-	
+	.anh{
+		vertical-align: bottom;
+		font-size: 20px;
+		font-weight: bold;
+
+	}
 	.topnav {
 	  overflow: hidden;
 	  background-color: #e9e9e9;
-	}
-	
+	  font-size: 20px;
+	  font-weight: bold;
+	}	
 	.topnav a {
 	  float: left;
 	  display: block;
@@ -41,19 +55,18 @@
 	  padding: 14px 16px;
 	  text-decoration: none;
 	  font-size: 17px;
-	}
-	
+	}	
 	.topnav a:hover {
 	  background-color: #ddd;
 	  color: black;
-	}
-	
+	}	
 	.topnav a.active {
-	  background-color: #2196F3;
-	  color: white;
-	}
-	
+	  background-color: #04AA6D;
+	}	
 	.topnav .search-container {
+	  float: center;
+	}
+	.topnav .search-container .active {
 	  float: right;
 	}
 	
@@ -65,7 +78,7 @@
 	}
 	
 	.topnav .search-container button {
-	  float: right;
+	  float: center;
 	  padding: 6px 10px;
 	  margin-top: 8px;
 	  margin-right: 16px;
@@ -100,48 +113,44 @@
 <body>
 	<!-- THANH MENU -->	
 	<div class="topnav">
-	  <a class="active" href="htsachController">Trang chủ</a>  
-	  <a class="active" href="htgioController">Giỏ hàng
-	  	<%
-	      	try {
-					giohangbo ghbo = (giohangbo)session.getAttribute("gio");
-					out.print(ghbo.ds.size());
-	      	    } catch(Exception e) {}
-	      	%>
-	  </a>
-	  <a class="active" href="thanhtoanController">Thanh toán </a>
-	  <a class="active" href="lichsuController">Lịch sử mua hàng</a>
-	  <a class="active" href="ktdnController">Đăng Nhập
-	  	
-	  </a>
-	  <a class="active" href="thoatController">Đăng Xuất
-	  	<%
-	      if(session.getAttribute("dn")!=null){
-	      %>
-	  </a>
-	  <div class="search-container">
-	    <form action="didongController" method="post">
-	      <input type="text" placeholder="Tìm kiếm" name="tk">
-	      <button type="submit"><i class="fa fa-search"></i></button>
-	    </form>
-	  </div>
+		  <a class="active" href="htsachController">Trang chủ</a>  
+		  <a class="active" href="htgioController">Giỏ hàng
+		  	<%
+		      	try {
+						giohangbo ghbo = (giohangbo)session.getAttribute("gio");
+						out.print(ghbo.ds.size());
+		      	    } catch(Exception e) {}
+		      	%>
+		  </a>
+		  <a class="active" href="thanhtoanController">Thanh toán </a>
+		  <a class="active" href="lichsuController">Lịch sử mua hàng</a>
+		  <div class="search-container">
+		    <form action="htsachController" method="post">
+		      <input type="text" placeholder="Tìm kiếm" name="txttk">
+		      <button type="submit"><i class="fa fa-search"></i></button>
+		      
+		      <a class="active " href="thoatController">Đăng Xuất
+		  		<%if(session.getAttribute("dn")!=null){%>
+		  	  </a>
+		  
+		    </form>
+		  </div>
 	</div>
-	
-	
 
- <table width="1000" align="center">
+
+
+ <table width="900" align="center" class="anh">
  	<tr>
- 		<td colspan="3">
- 			<h1>ĐIỆN THOẠI HAY</h1>
+ 		<td colspan="2">
+ 			<h1 class="h1">ĐIỆN THOẠI HAY</h1>
  		</td>
  	</tr>
  	
  	<tr>
- 		<td width="200" valign="top">
+ 		<td width="100"  valign="top" class="anh1" >
  			<table class="table table-hover">
       	 	  <%
-      	 	  ArrayList<loaibean> dsloai = (ArrayList<loaibean>) request.getAttribute("dsloai");
-      	 	  	  
+      	 	  ArrayList<loaibean> dsloai = (ArrayList<loaibean>) request.getAttribute("dsloai");      	 	  	  
       	 	        	 	  for(loaibean loai: dsloai) {
       	 	  %>
       	 	     <tr>
@@ -157,8 +166,8 @@
       	 	</table>
  		</td>
  		
- 		<td width="800" valign="top" >
- 			 <table class="table table-hover">
+ 		<td width="600" valign="top" >
+ 			 <table class="table table-hover" style="text-align: center;">
       	 	<%
       	 	ArrayList<didongbean> dssach = (ArrayList<didongbean>) request.getAttribute("dssach");
       	 	      	 	   	int n = dssach.size();
@@ -166,7 +175,7 @@
       	 	      	 			didongbean s=dssach.get(i);
       	 	%>
 	      	 		<tr>
-	      	 		   <td>
+	      	 		   <td >
 		      	 		   <img src="<%=s.getAnh() %>"><br>
 		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
@@ -178,7 +187,7 @@
 	      	 		   if(i<n){
 	      	 			s=dssach.get(i);
 	      	 		     %>
-	      	 		   <td>
+	      	 		   <td >
 		      	 		   <img src="<%=s.getAnh() %>"><br>
 		      	 		   <%=s.getTenDiDong() %> <br>
 		      	 		   <%=s.getGia() %> <br>
@@ -188,10 +197,9 @@
 	      	 		   </td>
 	      	 		   <%} %>	      	 		  
 	      	 		</tr>
-	      	 	<%} %>
+	      	 	<%}} %>
       	 	</table>
- 		</td>
- 			
+ 		</td> 			
  	</tr>
  </table>
 </body>
