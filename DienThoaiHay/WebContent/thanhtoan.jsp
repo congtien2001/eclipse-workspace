@@ -10,46 +10,42 @@
 <meta charset="UTF-8">
 <title>Thanh toán</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel=' icon'  href="didong_image/logo.png"  type="image/x-icon"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-
-
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="htsachController">Trang chủ</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li ><a href="htgioController">Giỏ hàng <b>
-      	<%	try {
-	      		giohangbo ghbo = (giohangbo)session.getAttribute("gio");
-	      		out.print(ghbo.ds.size());
-      		} catch(Exception e) {}
-      	%> </b>
-      </a></li>
-       <li ><a href="thanhtoanController">Thanh toán</a></li>
-       <li><a href="lichsuController">Lịch sử mua hàng</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="thoatController"><span class="glyphicon glyphicon-user">
-      </span> LogOut</a></li>
-      <%if(session.getAttribute("dn")!=null){ %>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in">
-      </span> Xin chao: <%=session.getAttribute("dn")%></a></li>
-      <%}else{ %>
-      <li><a href="dangnhap.jsp"><span class="glyphicon glyphicon-log-in">
-      </span> Login</a></li>
-      <%} %>
-    </ul>
-  </div>
-</nav>
-
-
-
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="htsachController">Trang chủ</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li ><a href="htgioController">Giỏ hàng <b>
+	      	<%	try {
+		      		giohangbo ghbo = (giohangbo)session.getAttribute("gio");
+		      		out.print(ghbo.ds.size());
+	      		} catch(Exception e) {}
+	      	%> </b>
+	      </a></li>
+	       <li ><a href="thanhtoanController">Thanh toán</a></li>
+	       <li><a href="lichsuController">Lịch sử mua hàng</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="thoatController"><span class="glyphicon glyphicon-user">
+	      </span> LogOut</a></li>
+	      <%if(session.getAttribute("dn")!=null){ %>
+	      <li><a href="#"><span class="glyphicon glyphicon-log-in">
+	      </span> Xin chao: <%=session.getAttribute("dn")%></a></li>
+	      <%}else{ %>
+	      <li><a href="dangnhap.jsp"><span class="glyphicon glyphicon-log-in">
+	      </span> Login</a></li>
+	      <%} %>
+	    </ul>
+	  </div>
+	</nav>
 
 	 <table width="1000" align="center">
 	 
@@ -73,8 +69,7 @@
 					    <td><b>Giá bán</b></td>
 					    <td><b>Thành tiền</b></td>
 				     </tr>
-				     <tr>
-				     
+				     <tr>				     
 		      	 	 </tr>
 			      	 <% for(giohangbean list: ghbo.ds) {%>
 				      	 	<tr>
@@ -101,16 +96,13 @@
 		      	</form>
 	      	 	
 	 		</td>
-	 		
-	 			
+	 			 			
 	 	</tr>
     <% } else{ %>
 		 <p>Giỏ hàng trống! Xin mời <a href="htsachController">Mua hàng</a></p>
 	<%}%>
 	 	
 	 </table>
-	 
-	 
 
 </body>
 </html>

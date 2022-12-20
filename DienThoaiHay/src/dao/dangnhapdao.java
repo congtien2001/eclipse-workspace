@@ -31,9 +31,9 @@ public class dangnhapdao {
 				String DiaChi = rs.getString("DiaChi");
 				String SoDT = rs.getString("SoDT");
 				String Email = rs.getString("Email");
-				String tendn = rs.getString("tendn");
-				String pass = rs.getString("pass");
-				ds.add(new khachhangbean(MaKH, HoTen, DiaChi, SoDT, Email, tendn, pass));
+				String TenDN = rs.getString("TenDN");
+				String Pass = rs.getString("Pass");
+				ds.add(new khachhangbean(MaKH, HoTen, DiaChi, SoDT, Email, TenDN, Pass));
 			}
 			
 			// b4: dong ket noi

@@ -9,7 +9,7 @@ public class lichsubean {
 	private Date NgayMua;
 	private boolean DaMua;
 	private String MaDiDong;
-	private String TenDiDong;
+	private String TenDiDong;	
 	private String Anh;
 	private int SoLuongMua;
 	private int Gia;

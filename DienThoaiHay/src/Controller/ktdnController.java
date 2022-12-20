@@ -46,7 +46,7 @@ public class ktdnController extends HttpServlet {
 		RequestDispatcher rd = null;
 		if(un!=null && pass!=null) {
 			for(khachhangbean item : dstaikhoan) {
-				if(un.equals(item.getTendn()) && pass.equals(item.getPass())) {
+				if(un.equals(item.getTenDN()) && pass.equals(item.getPass())) {
 					session.setAttribute("dn", un);		// tạo đối tượng session
 					session.setAttribute("makh", item.getMaKH());
 					
@@ -81,12 +81,12 @@ public class ktdnController extends HttpServlet {
 					break;
 				}
 				else {
-					rd = request.getRequestDispatcher("dangnhap.jsp");
+					rd = request.getRequestDispatcher("dangnhap1.jsp");
 				}
 			}
 		}
 		else {
-			rd = request.getRequestDispatcher("dangnhap.jsp");
+			rd = request.getRequestDispatcher("dangnhap1.jsp");
 		}
 		rd.forward(request, response);
 	}

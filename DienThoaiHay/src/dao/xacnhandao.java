@@ -56,7 +56,7 @@ public class xacnhandao {
 			kn.KetNoi();
 			
 			// Update bảng hoadon
-			String sql = "update ChiTietHoaDon set damua=1 where MaChiTietHD=? \r\n";
+			String sql = "update ChiTietHoaDon set DaMua=1 where MaChiTietHD=? \r\n";
 //						+ "update hoadon set damua=1 where MaHoaDon=?";
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd.setInt(1, macthd);

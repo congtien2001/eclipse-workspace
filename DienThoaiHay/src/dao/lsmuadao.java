@@ -12,7 +12,7 @@ import bean.lichsubean;
 public class lsmuadao {
 	
 	
-	public ArrayList<lichsubean> getLichSu(int MaKH) {
+	public ArrayList<lichsubean> getLichSu(int makh) {
 		try {
 			ArrayList<lichsubean> ds = new ArrayList<lichsubean>();
 			// b1 Ket noi vao CSDL
@@ -21,32 +21,31 @@ public class lsmuadao {
 			
 			// b2: Lay du lieu ve
 			// b2.1: Thiet lap cau lenh sql
-			String sql = "select hd.makh, hoten, hd.MaHoaDon, NgayMua, hd.damua, s.MaSach, s.tensach, s.anh, SoLuongMua, gia "
-					+ "from KhachHang as kh join hoadon as hd on kh.makh=hd.makh "
-					+ "join ChiTietHoaDon as cthd on hd.MaHoaDon = cthd.MaHoaDon "
-					+ "join sach as s on s.masach = cthd.MaSach "
-					+ "where hd.makh=? and hd.damua=1";
+			String sql = "select hd.MaKH, HoTen, hd.MaHoaDon, NgayMua, hd.DaMua, s.TenDiDong, s.Anh, SoLuongMua, Gia, s.MaDiDong\r\n"
+					+ "from KhachHang as kh join HoaDon as hd on kh.MaKH=hd.MaKH\r\n"
+					+ "join ChiTietHoaDon as cthd on hd.MaHoaDon = cthd.MaHoaDon\r\n"
+					+ "join DiDong as s on s.MaDiDong = cthd.MaDiDong\r\n"
+					+ "where hd.MaKH=? and hd.DaMua=1";
 			// b2.2: Thuc hien cau lenh
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
-			cmd.setInt(1, MaKH);
+			cmd.setInt(1, makh);
 			ResultSet rs = cmd.executeQuery();
 			
 			// b3: Duyet qua tap du lieu rs va luu vao mang ds
 			while(rs.next()) {
 				// Lay ve ma loai va ten loai
-				int makh = rs.getInt("makh");
-				String hoten = rs.getString("hoten");
+				int MaKH = rs.getInt("MaKH");
+				String HoTen = rs.getString("HoTen");
 				int MaHoaDon = rs.getInt("MaHoaDon");
-//				SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd");
 				Date NgayMua = rs.getDate("NgayMua");
-				boolean damua = rs.getBoolean("damua");
-				String MaSach = rs.getString("MaSach");
-				String tensach = rs.getString("tensach");
-				String anh = rs.getString("anh");
+				boolean DaMua = rs.getBoolean("DaMua");
+				String MaDiDong = rs.getString("MaDiDong");
+				String TenDiDong = rs.getString("TenDiDong");
+				String Anh = rs.getString("Anh");
 				int SoLuongMua = rs.getInt("SoLuongMua");
-				int gia = rs.getInt("gia");
+				int Gia = rs.getInt("Gia");
 				
-				ds.add(new lichsubean(makh, hoten, MaHoaDon, NgayMua, damua, MaSach, tensach, anh, SoLuongMua, gia));
+				ds.add(new lichsubean(MaKH, HoTen, MaHoaDon, NgayMua, DaMua, MaDiDong, TenDiDong, Anh, SoLuongMua, Gia));
 			}
 			
 			// b4: dong ket noi

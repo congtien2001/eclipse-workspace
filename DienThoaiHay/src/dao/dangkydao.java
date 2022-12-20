@@ -8,7 +8,7 @@ import bean.khachhangbean;
 
 public class dangkydao {
 	
-	public void Dangky(String HoTen, String DiaChi, String SoDT, String Email, String tendn, String pass) {
+	public void Dangky(String HoTen, String DiaChi, String SoDT, String Email, String TenDN, String Pass) {
 		try {
 			KetNoidao kn = new KetNoidao();
 			kn.KetNoi();
@@ -20,8 +20,8 @@ public class dangkydao {
 			cmd.setString(2, DiaChi);
 			cmd.setString(3, SoDT);
 			cmd.setString(4, Email);
-			cmd.setString(5, tendn);
-			cmd.setString(6, pass);
+			cmd.setString(5, TenDN);
+			cmd.setString(6, Pass);
 			
 			cmd.executeUpdate();
 			

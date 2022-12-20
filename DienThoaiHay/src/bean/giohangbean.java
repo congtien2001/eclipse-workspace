@@ -18,7 +18,7 @@ public class giohangbean {
 		TenDiDong = tenDiDong;
 		SoLuong = soLuong;
 		Gia = gia;
-		ThanhTien = thanhTien;
+		ThanhTien = SoLuong*Gia;
 	}
 	public String getAnh() {
 		return Anh;
@@ -51,7 +51,7 @@ public class giohangbean {
 		Gia = gia;
 	}
 	public long getThanhTien() {
-		return ThanhTien;
+		return SoLuong*Gia;
 	}
 	public void setThanhTien(long thanhTien) {
 		ThanhTien = thanhTien;

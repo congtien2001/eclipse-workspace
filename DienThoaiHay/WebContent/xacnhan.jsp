@@ -46,13 +46,8 @@
   </div>
 </nav>
 
-
-
-
  <table width="1000" align="center" class="table table-hover">
- 	<%	ArrayList<xacnhanbean> dsxn = (ArrayList<xacnhanbean>) session.getAttribute("dsxacnhan");
- 	%>
- 	
+ 	<%	ArrayList<xacnhanbean> dsxn = (ArrayList<xacnhanbean>) session.getAttribute("dsxacnhan");%>	
  	<tr>
  		<th>Mã chi tiết HD</th>
  		<th>Tên KH</th>
@@ -60,24 +55,17 @@
  		<th>Số lượng</th>
  		<th>Thành tiền</th>
  		<th></th>
- 	</tr>
- 	
- 	<%for(xacnhanbean xn : dsxn){ %>
- 	
+ 	</tr>	
+ 	<%for(xacnhanbean xn : dsxn){ %>	
  	<tr>
  		<td><%=xn.getMaChiTietHD() %></td>
  		<td><%=xn.getHoTen() %></td>
  		<td><%=xn.getTenDiDong() %></td>
  		<td><%=xn.getSoLuongMua() %></td>
  		<td><%=xn.getThanhTien() %></td>
- 		<td><a href="xacnhanchitietController?mct=<%=xn.getMaChiTietHD()%>&mhd=<%=xn.getMaHoaDon()%>">Xác nhận chuyển tiền</a></td>
- 		
- 		
- 	</tr>
- 	
+ 		<td><a href="xacnhanchitietController?mct=<%=xn.getMaChiTietHD()%>&mhd=<%=xn.getMaHoaDon()%>">Xác nhận chuyển tiền</a></td>	
+ 	</tr> 	
  	<%} %>
- </table>
- 
- 
+ </table> 
 </body>
 </html>

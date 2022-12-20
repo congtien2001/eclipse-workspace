@@ -10,7 +10,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <ul class="nav navbar-nav">
@@ -23,18 +22,13 @@
 	  </div>
 	</nav>
 
-
-
  	<table width="1000" align="center">
- 
 	 	<tr>
 	 		<td colspan="3">
 	 			<h1>BÁN SÁCH ONLINE</h1>
 	 		</td>
 	 	</tr>
-	 	
-	 	<tr>
-	 		
+	 	<tr>	 		
 	 		<td width="800" valign="top" >
 	 			 <form action="dangkyController" method="post">
 	 			 	Nhập Họ tên: <input name="txthoten" type="text" placeholder="Nhập Họ tên"> <br><br>
@@ -46,10 +40,8 @@
 				  	
 				  	<input name="signup" type="submit" value="Sign up">
 				</form>
-	 		</td>
-	 		
-	 	</tr>
- 	
+	 		</td>	 		
+	 	</tr>	
  	</table>
 
 

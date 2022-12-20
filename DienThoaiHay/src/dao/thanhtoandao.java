@@ -60,8 +60,7 @@ public class thanhtoandao {
 			cmd.setObject(4, 1);
 			
 			cmd.executeUpdate();
-			
-			
+						
 			kn.Cn.close();
 			
 		} catch(Exception e) {

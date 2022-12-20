@@ -119,11 +119,11 @@ public class giohangdao {
 			KetNoidao kn = new KetNoidao();
 			kn.KetNoi();
 // ????
-			String sql = "select hd.makh, hoten, hd.MaHoaDon, NgayMua, hd.damua, s.MaSach, s.tensach, s.anh, SoLuongMua, gia "
-					+ "from KhachHang as kh join hoadon as hd on kh.makh=hd.makh "
+			String sql = "select hd.MaKH, HoTen, hd.MaHoaDon, NgayMua, hd.DaMua, s.MaDiDong, s.TenDiDong, s.Anh, SoLuongMua, Gia "
+					+ "from KhachHang as kh join HoaDon as hd on kh.MaKH=hd.MaKH "
 					+ "join ChiTietHoaDon as cthd on hd.MaHoaDon = cthd.MaHoaDon "
-					+ "join sach as s on s.masach = cthd.MaSach "
-					+ "where hd.makh=? and hd.damua=0 and cthd.damua=0";
+					+ "join DiDong as s on s.MaDiDong = cthd.MaDiDong "
+					+ "where hd.MaKH=? and hd.DaMua=0 and cthd.DaMua=0";
 
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd.setInt(1, MaKH);

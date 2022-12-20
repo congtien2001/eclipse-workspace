@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel=' icon'  href="didong_image/logo.png"  type="image/x-icon"/>
 </head>
 <body>
 

@@ -41,10 +41,10 @@ public class dangkyController extends HttpServlet {
 		if(hoten!=null && diachi!=null && tendn!=null && pass!=null) {
 			dangkydao dkdao = new dangkydao();
 			dkdao.Dangky(hoten, diachi, sodt, email, tendn, pass);
-			rd = request.getRequestDispatcher("dangky.jsp");
+			rd = request.getRequestDispatcher("dangky1.jsp");
 		} 
 		else {
-			rd = request.getRequestDispatcher("dangky.jsp");
+			rd = request.getRequestDispatcher("dangky1.jsp");
 		}
 		
 		

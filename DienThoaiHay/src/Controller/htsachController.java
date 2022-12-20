@@ -44,8 +44,7 @@ public class htsachController extends HttpServlet {
 		loaibo lbo = new loaibo();
 		ArrayList<loaibean>  dsloai = lbo.getLoai();
 		request.setAttribute("dsloai", dsloai);
-		
-		
+				
 		didongbo sdao= new didongbo();
 	 	ArrayList<didongbean> dssach= sdao.getSach();
 	 	String ml=request.getParameter("ml");
@@ -75,13 +74,7 @@ public class htsachController extends HttpServlet {
   	  	 		session.setAttribute("gio", ghbo);
   		 	}
   	 	}
-	 	
-//	 	giohangbo ghCSDL = (giohangbo) request.getAttribute("gioCSDL");
-//	 	session.setAttribute("gioCSDL", ghCSDL);
-//	 	giohangbo gh = (giohangbo) request.getAttribute("gio");
-//	 	session.setAttribute("gio", gh);
-	 	
-	 	
+
 	 	request.setAttribute("dssach", dssach);
 	 	RequestDispatcher rd = request.getRequestDispatcher("htsach.jsp");
 	 	rd.forward(request, response);

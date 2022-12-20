@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,24 +73,31 @@ a {
 <body>
 	<form action="LoginController" method="post">
   <div class="container">
-    <h2 style="text-align: center;">Register</h2>
-    <p style="text-align: right";>Please fill in this form to create an account.</p>
+    <h2 style="text-align: center;">Đăng ký</h2>
+    <p style="text-align: center";>Điền đầy đủ thông tin để đăng ký.</p>
     <hr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="email"><b>Họ tên:</b></label>
+    <input type="text" placeholder="Nhập họ tên" name="email" id="email" required>
     
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="email"><b>Địa chỉ:</b></label>
+    <input type="text" placeholder="Nhập địa chỉ" name="email" id="email" required>
+    
+    <label for="psw"><b>Số điện thoại:</b></label>
+    <input type="text" placeholder="Nhập số điện thoại" name="psw" id="psw" required>
+	
+	<label for="psw"><b>Email:</b></label>
+    <input type="text" placeholder="Nhập email" name="psw" id="psw" required>
+    
+    <label for="psw"><b>Tên đăng nhập:</b></label>
+    <input type="text" placeholder="Nhập tên đăng nhập" name="psw" id="psw" required>
+    
+    <label for="psw-repeat"><b>Mật khẩu</b></label>
+    <input type="password" placeholder="Nhập mật khẩu" name="psw-repeat" id="psw-repeat" required>
     
     
     <hr>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
 
     <button type="submit" class="registerbtn">Register</button>
   </div>

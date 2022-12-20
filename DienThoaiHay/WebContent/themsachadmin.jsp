@@ -38,9 +38,7 @@
 	    </ul>
 	  </div>
 	</nav>
-		
-		
-		
+	
 		<table width="1000" align="center">
 		 	<tr>
 		 		<th colspan="3">
@@ -74,14 +72,9 @@
 					</form> 
 		 		</td>	
 		 	</tr>
-		 	
-		 	
+		 			 	
 		 </table>
-	
-	
-	
-	
-	
+
 </body>
 
 </html>

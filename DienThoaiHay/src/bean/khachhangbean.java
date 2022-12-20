@@ -6,20 +6,20 @@ public class khachhangbean {
 	private String DiaChi;
 	private String SoDT;
 	private String Email;
-	private String tendn;
-	private String pass;
+	private String TenDN;
+	private String Pass;
 	public khachhangbean() {
 		super();
 	}
-	public khachhangbean(int maKH, String hoTen, String diaChi, String soDT, String email, String tendn, String pass) {
+	public khachhangbean(int maKH, String hoTen, String diaChi, String soDT, String email, String tenDN, String pass) {
 		super();
 		MaKH = maKH;
 		HoTen = hoTen;
 		DiaChi = diaChi;
 		SoDT = soDT;
 		Email = email;
-		this.tendn = tendn;
-		this.pass = pass;
+		TenDN = tenDN;
+		Pass = pass;
 	}
 	public int getMaKH() {
 		return MaKH;
@@ -51,18 +51,20 @@ public class khachhangbean {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public String getTendn() {
-		return tendn;
+	public String getTenDN() {
+		return TenDN;
 	}
-	public void setTendn(String tendn) {
-		this.tendn = tendn;
+	public void setTenDN(String tenDN) {
+		TenDN = tenDN;
 	}
 	public String getPass() {
-		return pass;
+		return Pass;
 	}
 	public void setPass(String pass) {
-		this.pass = pass;
+		Pass = pass;
 	}
+	
+	
 	
 	
 	

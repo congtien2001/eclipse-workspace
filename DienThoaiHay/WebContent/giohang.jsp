@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel=' icon'  href="didong_image/logo.png"  type="image/x-icon"/>
 </head>
 <body>
 	<%

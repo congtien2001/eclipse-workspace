@@ -8,7 +8,7 @@ import dao.lsmuadao;
 public class lichsubo {
 	lsmuadao lsdao = new lsmuadao();
 	
-	public ArrayList<lichsubean> getLichSu(int MaKH) {
-		return lsdao.getLichSu(MaKH);
+	public ArrayList<lichsubean> getLichSu(int makh) {
+		return lsdao.getLichSu(makh);
 	}
 }
