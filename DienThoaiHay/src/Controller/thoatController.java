@@ -53,6 +53,7 @@ public class thoatController extends HttpServlet {
 		session.removeAttribute("dn");
 		session.removeAttribute("gio");
 		session.removeAttribute("makh");
+		session.removeAttribute("ls");
 		rd = request.getRequestDispatcher("ktdnController");
 		rd.forward(request, response);
 		

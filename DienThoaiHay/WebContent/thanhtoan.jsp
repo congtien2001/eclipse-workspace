@@ -16,97 +16,96 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<style>
-	* {box-sizing: border-box;
+		* {box-sizing: border-box;
+			}
+		body {
+		  margin: 0;
+		  font-family: Arial, Helvetica, sans-serif;
 		}
-	body {
-	  margin: 0;
-	  font-family: Arial, Helvetica, sans-serif;
-	}
-	.ten{
-		text-align: center;
-		font-size: 30px;
-	}
-	.h1{
-		text-align: center;
-		background-color:#EF4444 ;
-	}
-	.anh1{
-
-	}
+		.ten{
+			text-align: center;
+			font-size: 30px;
+		}
+		.h1{
+			text-align: center;
+			background-color:#EF4444 ;
+		}
+		.anh1{
 	
-	.anh{
-		vertical-align: bottom;
-		font-size: 20px;
-		font-weight: bold;
-
-	}
-	.topnav {
-	  overflow: hidden;
-	  background-color: #e9e9e9;
-	  font-size: 20px;
-	  font-weight: bold;
-	}	
-	.topnav a {
-	  float: left;
-	  display: block;
-	  color: black;
-	  text-align: center;
-	  padding: 14px 16px;
-	  text-decoration: none;
-	  font-size: 17px;
-	}	
-	.topnav a:hover {
-	  background-color: #ddd;
-	  color: black;
-	}	
-	.topnav a.active {
-	  background-color: #04AA6D;
-	}	
-	.topnav .search-container {
-	  float: center;
-	}
-	.topnav .search-container .active {
-	  float: right;
-	}
+		}
+		
+		.anh{
+			vertical-align: bottom;
+			font-size: 20px;
+			font-weight: bold;
 	
-	.topnav input[type=text] {
-	  padding: 6px;
-	  margin-top: 8px;
-	  font-size: 17px;
-	  border: none;
-	}
-	
-	.topnav .search-container button {
-	  float: center;
-	  padding: 6px 10px;
-	  margin-top: 8px;
-	  margin-right: 16px;
-	  background: #ddd;
-	  font-size: 17px;
-	  border: none;
-	  cursor: pointer;
-	}
-	
-	.topnav .search-container button:hover {
-	  background: #ccc;
-	}
-	
-	@media screen and (max-width: 600px) {
-	  .topnav .search-container {
-	    float: none;
-	  }
-	  .topnav a, .topnav input[type=text], .topnav .search-container button {
-	    float: none;
-	    display: block;
-	    text-align: left;
-	    width: 100%;
-	    margin: 0;
-	    padding: 14px;
-	  }
-	  .topnav input[type=text] {
-	    border: 1px solid #ccc;  
-	  }
-	}
+		}
+		.topnav {
+		  overflow: hidden;
+		  background-color: #e9e9e9;
+		  font-size: 20px;
+		  font-weight: bold;
+		}	
+		.topnav a {
+		  float: left;
+		  display: block;
+		  color: black;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}	
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}	
+		.topnav a.active {
+		  background-color: #04AA6D;
+		}	
+		.topnav .search-container {
+		  float: center;
+		}
+		.topnav .search-container .active {
+		  float: right;
+		}
+		
+		.topnav input[type=text] {
+		  padding: 9px;
+	  		font-size: 17px;
+	  		border: solid;
+		}
+		
+		.topnav .search-container button {
+		  float: center;
+		  padding: 6px 10px;
+		  margin-top: 8px;
+		  margin-right: 16px;
+		  background: #ddd;
+		  font-size: 17px;
+		  border: none;
+		  cursor: pointer;
+		}
+		
+		.topnav .search-container button:hover {
+		  background: #ccc;
+		}
+		
+		@media screen and (max-width: 600px) {
+		  .topnav .search-container {
+		    float: none;
+		  }
+		  .topnav a, .topnav input[type=text], .topnav .search-container button {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		    width: 100%;
+		    margin: 0;
+		    padding: 14px;
+		  }
+		  .topnav input[type=text] {
+		    border: 1px solid #ccc;  
+		  }
+		}
 	</style>
   
 </head>

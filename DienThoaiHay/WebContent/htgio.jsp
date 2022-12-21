@@ -76,10 +76,9 @@
 	}
 	
 	.topnav input[type=text] {
-	  padding: 6px;
-	  margin-top: 8px;
+	  padding: 9px;
 	  font-size: 17px;
-	  border: none;
+	  border: solid;
 	}
 	
 	.topnav .search-container button {

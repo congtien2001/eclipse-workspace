@@ -47,7 +47,7 @@ public class lichsuController extends HttpServlet {
 			
 			lichsubo lsbo = new lichsubo();
 			ArrayList<lichsubean> ls = lsbo.getLichSu(makh);
-			request.setAttribute("ls", ls);
+			session.setAttribute("ls", ls);
 			
 			rd = request.getRequestDispatcher("lichsu.jsp");
 			rd.forward(request, response);

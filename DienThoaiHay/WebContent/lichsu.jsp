@@ -69,10 +69,9 @@
 	}
 	
 	.topnav input[type=text] {
-	  padding: 6px;
-	  margin-top: 8px;
+	  padding: 9px;
 	  font-size: 17px;
-	  border: none;
+	  border: solid;
 	}
 	
 	.topnav .search-container button {
@@ -129,9 +128,8 @@
 		      <input type="text" placeholder="Tìm kiếm" name="txttk">
 		      <button type="submit"><i class="fa fa-search"></i></button>
 		      
-		      <a class="active " href="thoatController">Đăng Xuất
+		      <a class="active " href="thoatController">Đăng Xuất</a>
 		  		<%if(session.getAttribute("dn")!=null){%>
-		  	  </a>
 		  
 		    </form>
 		  </div>
@@ -156,13 +154,13 @@
  			<table class="table table-hover">
 	 			 <tr>
 				 	<td><b>Mã hóa đơn</b></td>
-				    <td><b>Tên sách</b></td>
+				    <td><b>Tên di động</b></td>
 				    <td><b>Số lượng mua</b></td>
 				    <td><b>Giá bán</b></td>
 				    <td><b>Ngày mua</b></td>
 				    <td><b>Đã mua</b></td>
 			     </tr>
-		      	 <% ArrayList<lichsubean> ls = (ArrayList<lichsubean>) request.getAttribute("ls");
+		      	 <% ArrayList<lichsubean> ls = (ArrayList<lichsubean>) session.getAttribute("ls");
 		      		if(ls!=null) {
 		      			for(lichsubean ds : ls) {%>
 				      	 	<tr>

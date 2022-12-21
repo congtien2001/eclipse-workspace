@@ -10,6 +10,7 @@
 	<%
 		session.removeAttribute("dn");
 		session.removeAttribute("gio");
+		session.removeAttribute("makh");
 		response.sendRedirect("ktdnController");
 	%>
 </body>

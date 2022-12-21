@@ -14,7 +14,7 @@ public class thanhtoandao {
 			kn.KetNoi();
 			
 			// Update bảng hoadon
-			String sql = "insert into HoaDon values(?,?,?)";
+			String sql = "insert into HoaDon(MaKH,NgayMua,DaMua) values(?,?,?)";
 			PreparedStatement cmd = kn.Cn.prepareStatement(sql);
 			cmd.setInt(1, makh);
 			SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd");
@@ -52,7 +52,7 @@ public class thanhtoandao {
 			
 			
 			// Update bảng ChiTietHoaDon
-			sql = "insert into ChiTietHoaDon values(?,?,?,?)";
+			sql = "insert into ChiTietHoaDon(MaDiDong,SoLuongMua,MaHoaDon,DaMua) values(?, ?, ?, ?)";
 			cmd = kn.Cn.prepareStatement(sql);
 			cmd.setString(1, MaDiDong);
 			cmd.setLong(2, SoLuong);
